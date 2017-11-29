@@ -38,6 +38,20 @@ var employees = [{
 
 // Code here
 
+function employeeUpdater() {
+  for (var i = 0; i < employees.length; i++) {
+    employees
+    if (employees[i].firstName === 'Theo') {
+      employees.splice(i, 1);
+    }
+    if (employees[i].firstName === 'Lorie') {
+      employees[i].department = 'HR';
+    }
+  }
+  return employees;
+}
+employeeUpdater();
+employees
 
 
 
@@ -56,10 +70,19 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 
 // Code here
 
-
-
-
-
+function removeDuplicates(arr) {
+  for (var i = 0; i < arr.length; i++) {
+    for (var j = i + 1; j < arr.length; j++) {
+      if (arr[i] === arr[j]) {
+        arr.splice(i,1);
+        j = i + 1;
+      }
+    }
+  }
+  return arr;
+}
+removeDuplicates(workplaceAccidents);
+workplaceAccidents
 
 
 
@@ -75,7 +98,7 @@ var cat = {
   }, {
     name: 'Lazy Bones',
     activities: ['sleep', 'pre-sleep naps']
-    }]
+  }]
 }
 
 // Fluffy has two friends, Grumpy and Lazy Bones. 
@@ -110,11 +133,11 @@ var myCar = {
       date: '3/15/93',
       damage: '$5,000',
       atFaultForAccident: true
-    },{
+    }, {
       date: '7/4/98',
       damage: '$2,200',
       atFaultForAccident: true
-    },{
+    }, {
       date: '6/22/99',
       damage: '$7,900',
       atFaultForAccident: true
@@ -141,7 +164,7 @@ var myCar = {
 //    If the number is even, replace it with 'even'.
 // 4. Return the modified numsArr.
 
-var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
+var numsArr = [[1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 
 
 
