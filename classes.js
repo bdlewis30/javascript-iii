@@ -22,7 +22,20 @@ Each employee can:
 call your class Employee and receive all the data in the constructor in the order listed
 */
 
+class Employee {
+    constructor(first_name, last_name, email, age){
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.email = email;
+        this.age = age;
+    }
 
+    makeWidget(){
+        return this.first_name + ' ' + this.last_name + ' Widget'
+    }
+}
+var employeeDan = new Employee('Dan','Smith','dan@email.com',25);
+var widget = employeeDan.makeWidget()
 
 /*
 
@@ -41,9 +54,28 @@ call your class Manager
 
 */
 
+class Manager{
+    constructor(first_name, last_name, email, age){
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.email = email;
+        this.age = age;
+        this.reports = [];
+    }
 
+    hire(newEmployee){
+        return this.reports.push(newEmployee)
+    }
+   
 
+    fire(index){
+        return reports.splice(index,1);
+    }
+}
 
+var newEmployee = new Employee('Joe', 'Smith', 'joe@email.com', 24);
+
+var index = this.reports.map();
 
 /*
 Manager for Widget Co. get promoted when they get more employees, and get a bonus when they fire employees.
