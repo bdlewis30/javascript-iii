@@ -69,13 +69,13 @@ class Manager{
    
 
     fire(index){
-        return reports.splice(index,1);
+        return this.reports.splice(index,1);
     }
 }
 
 var newEmployee = new Employee('Joe', 'Smith', 'joe@email.com', 24);
 
-var index = this.reports.map();
+
 
 /*
 Manager for Widget Co. get promoted when they get more employees, and get a bonus when they fire employees.
